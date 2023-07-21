@@ -113,9 +113,7 @@
     font-size: 32px;
     font-weight: 600;
 }
-.banner-right span{
-    font-size: 18px;
-}
+
 .banner-left-search{
     background-color: white;
     padding: 15px;
@@ -139,11 +137,19 @@
 .banner-right{
     width: 50%;
     position: relative;
+    display: flex;
+
 }
+.button:hover {
+    cursor: pointer;
+    
+}
+
 .banner-right img{
     position: absolute;
     bottom: 0;
     transform: scaleX(-1);
+    right: 10%;
 }
 .banner-right-bg{
     background-color: gray;
@@ -215,6 +221,7 @@
 .about{
 
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 20px;
     background-color: rgba(134, 126, 126,0.134);
@@ -364,6 +371,22 @@ gap: 10px;
 }
 /*Responsive ayarlar*/
 @media screen and (max-width:900px) {
+    .header-left-menu {
+
+        border-radius: 5px;
+        background-color: #c1dcdc;
+        width: 50%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin-left: 2px;
+        padding: 5px;
+
+    }
+    .header-left-menu a{
+        font-size: 18px;
+    }
+    
     .banner-left{
         width: 100%;
     }
@@ -374,6 +397,9 @@ gap: 10px;
         padding: 10px;
         font-size: 35px;
         width: 100%;
+    }
+    .banner-right img{
+        display: none;
     }
     .banner-left-contents{
         background-color: white;
